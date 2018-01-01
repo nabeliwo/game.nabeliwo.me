@@ -1,0 +1,19 @@
+<footer class="footer">
+  <div class="footer__inner">
+    <div>
+      <div class="footer__icon">{{ partial "svg/icon.html" . }}</div>
+      <ul class="footer__list">
+        <li>
+          <a class="c-social js-touch" href="https://twitter.com/{{ .Site.Params.socialbase }}">{{ partial "svg/twitter.html" }}</a>
+        </li>
+        <li>
+          <a class="c-social js-touch" href="https://github.com/{{ .Site.Params.socialbase }}">{{ partial "svg/github.html" }}</a>
+        </li>
+        <li>
+          <a class="c-social js-touch" href="{{ .Site.RSSLink }}">{{ partial "svg/rss.html" }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <p class="footer__copy">© 2017 ゲームニッポウ。</p>
+</footer>

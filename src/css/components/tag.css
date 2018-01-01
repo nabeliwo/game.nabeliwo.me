@@ -1,0 +1,56 @@
+.c-tags.c-tags--small {
+  margin-right: -.2rem;
+  margin-left: -.2rem;
+}
+.c-tag {
+  display: inline-block;
+  border: 1px solid;
+  border-radius: 3px;
+  transition: all .2s ease-in-out;
+}
+.c-tags--small .c-tag {
+  margin: .3rem .1rem;
+  padding: .3rem;
+  font-size: 1.0rem;
+}
+.c-tags > .c-tag:nth-child(1) {
+  border-color: var(--color-rainbow-lightgreen);
+  color: var(--color-rainbow-lightgreen);
+}
+.c-tags > .c-tag:nth-child(2) {
+  border-color: var(--color-rainbow-green);
+  color: var(--color-rainbow-green);
+}
+.c-tags > .c-tag:nth-child(3) {
+  border-color: var(--color-rainbow-lightblue);
+  color: var(--color-rainbow-lightblue);
+}
+.c-tags > .c-tag:nth-child(4) {
+  border-color: var(--color-rainbow-blue);
+  color: var(--color-rainbow-blue);
+}
+.c-tags > .c-tag:nth-child(5) {
+  border-color: var(--color-rainbow-purple);
+  color: var(--color-rainbow-purple);
+}
+.c-tags > .c-tag:nth-child(6) {
+  border-color: var(--color-rainbow-pink);
+  color: var(--color-rainbow-pink);
+}
+.c-tags > .c-tag:nth-child(7) {
+  border-color: var(--color-rainbow-vermilion);
+  color: var(--color-rainbow-vermilion);
+}
+.c-tags > .c-tag:nth-child(8) {
+  border-color: var(--color-rainbow-orange);
+  color: var(--color-rainbow-orange);
+}
+.c-tag.is-link:hover { color: var(--color-white) !important; }
+.c-tags > .c-tag.is-link:nth-child(1):hover { background-color: var(--color-rainbow-lightgreen); }
+.c-tags > .c-tag.is-link:nth-child(2):hover { background-color: var(--color-rainbow-green); }
+.c-tags > .c-tag.is-link:nth-child(3):hover { background-color: var(--color-rainbow-lightblue); }
+.c-tags > .c-tag.is-link:nth-child(4):hover { background-color: var(--color-rainbow-blue); }
+.c-tags > .c-tag.is-link:nth-child(5):hover { background-color: var(--color-rainbow-purple); }
+.c-tags > .c-tag.is-link:nth-child(6):hover { background-color: var(--color-rainbow-pink); }
+.c-tags > .c-tag.is-link:nth-child(7):hover { background-color: var(--color-rainbow-vermilion); }
+.c-tags > .c-tag.is-link:nth-child(8):hover { background-color: var(--color-rainbow-orange); }

@@ -1,0 +1,17 @@
+title = "ゲームニッポウ。"
+baseurl = "https://game.nabeliwo.me/"
+canonifyurls = true
+paginate = 20
+paginatePath = "page"
+enableEmoji = true
+
+[permalinks]
+  post = "/:year/:month/:slug/"
+
+# More options
+[params]
+  author = "nabeliwo"
+  description = "ゲームニッポウは@nabeliwoによる「毎日ゲームをするんだ」という誓いを実践するための覚悟の証です。"
+  socialbase = "nabeliwo"
+  image = "/images/social.png"
+

@@ -1,0 +1,14 @@
+.c-social {
+  display: block;
+  width: 30px;
+  height: 30px;
+  transition: transform .3s;
+}
+
+@media (--mobile) {
+  .c-social.is-touch { transform: scale(.8, .8); }
+}
+
+@media (--pc) {
+  .c-social:hover { transform: scale(.8, .8); }
+}

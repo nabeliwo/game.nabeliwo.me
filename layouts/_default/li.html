@@ -1,0 +1,22 @@
+<a class="c-article" href="{{ .Permalink }}">
+  {{ if ne .Params.image "" }}
+    <div class="c-atricle__bg is-image" style="background-image: url('{{ .Params.image }}')"></div>
+  {{ else }}
+    <div class="c-atricle__bg"></div>
+  {{ end}}
+
+  <div class="c-article__box">
+    <p class="c-article__date">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+    </p>
+
+    <p class="c-article__title">{{ .Title }}</p>
+    <p class="c-article__desc">{{ .Params.description }}</p>
+
+    <div class="c-tags c-tags--small">
+      {{ range .Params.tags }}
+        <span class="c-tag">{{ . }}</span>
+      {{ end }}
+    </div>
+  </div>
+</a>

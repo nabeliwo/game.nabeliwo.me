@@ -1,0 +1,31 @@
+.p-keyvisual {
+  padding: 4rem 0;
+}
+.p-keyvisual__logo {
+  width: 456px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+.p-keyvisual__logo > svg {
+  width: 100%;
+}
+.p-keyvisual__text {
+  color: var(--color-white);
+  font-weight: bold;
+  font-size: 1.6rem;
+  text-align: center;
+  font-family: 'Hiragino Maru Gothic Pro', 'ヒラギノ丸ゴ Pro W4', '游ゴシック Medium', meiryo, sans-serif;
+}
+
+.p-home {
+  margin: -2rem;
+  padding: 4rem;
+  font-size: 0;
+  text-align: center;
+}
+.p-home__item {
+  display: inline-block;
+  width: 340px;
+  padding: 2rem;
+  vertical-align: middle;
+}

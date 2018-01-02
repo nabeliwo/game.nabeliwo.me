@@ -134,6 +134,12 @@
 @media (--mobile) {
   .c-post { font-size: 1.6rem; }
 
+  .c-post h2,
+  .c-post h3,
+  .c-post h4,
+  .c-post h5,
+  .c-post h6 { line-height: 1.8; }
+
   .c-post h2 {
     margin: 4rem auto 2rem;
     padding-bottom: .5rem;

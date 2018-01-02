@@ -6,7 +6,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 260px;
 }
 .footer__icon {
   margin-bottom: 1rem;
@@ -25,8 +24,17 @@
 .footer__list > li:nth-child(3) .c-social { fill: var(--color-rainbow-lightgreen); }
 .footer__copy {
   padding: 1rem 0;
-  font-size: 1.2rem;
   text-align: center;
   line-height: 1.6;
   letter-spacing: .1rem;
+}
+
+@media (--pc) {
+  .footer__inner { height: 260px; }
+  .footer__copy { font-size: 1.2rem; }
+}
+
+@media (--mobile) {
+  .footer__inner { height: 200px; }
+  .footer__copy { font-size: 1.0rem; }
 }

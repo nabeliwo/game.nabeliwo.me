@@ -1,0 +1,28 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+<div class="p-single">
+  <article>
+    <header class="p-single__head">
+      <p class="p-single__head__date">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+      </p>
+
+      <h1 class="p-single__head__title">{{ .Title }}</h1>
+
+      <div class="c-tags c-tags--medium">
+        {{ range .Params.tags }}
+          <a class="c-tag is-link js-touch" href="/tags/{{ lower . }}">{{ . }}</a>
+        {{ end }}
+      </div>
+    </header>
+
+    <div class="c-post">
+      {{ .Content }}
+    </div>
+  </article>
+</div>
+
+{{ partial "footer.html" . }}
+{{ partial "navi.html" . }}
+{{ partial "foot.html" . }}

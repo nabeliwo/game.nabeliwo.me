@@ -1,0 +1,18 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+<div class="p-taxonomy">
+  <header class="p-taxonomy__head">
+    <h1 class="p-taxonomy__head__title">{{ .Data.Singular }}: {{ .Data.Term }}</h1>
+  </header>
+
+  <div class="p-taxonomy__list">
+    {{ range where .Paginator.Pages "Section" "post" }}
+      <article class="p-taxonomy__item">{{ .Render "li" }}</article>
+    {{ end }}
+  </div>
+</div>
+
+{{ partial "footer.html" . }}
+{{ partial "navi.html" . }}
+{{ partial "foot.html" . }}

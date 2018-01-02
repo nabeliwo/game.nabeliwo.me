@@ -5,10 +5,10 @@
   transition: transform .3s;
 }
 
-@media (--mobile) {
-  .c-social.is-touch { transform: scale(.8, .8); }
-}
-
 @media (--pc) {
   .c-social:hover { transform: scale(.8, .8); }
+}
+
+@media (--mobile) {
+  .c-social.is-touch { transform: scale(.8, .8); }
 }

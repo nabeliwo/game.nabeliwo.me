@@ -32,18 +32,24 @@
   transition: transform .2s ease-out;
   content: '';
 }
-.header__item:hover::after { transform: scaleX(1); }
 
 @media (--pc) {
   .header {
     height: 70px;
     padding: 0 2rem;
   }
+  .header__logo { transition: opacity .2s ease-out; }
+  .header__logo:hover { opacity: .7; }
+  .header__item:hover::after { transform: scaleX(1); }
 }
 
 @media (--mobile) {
   .header {
-    height: 70px;
+    justify-content: center;
+    height: 50px;
     padding: 0 1rem;
   }
+  .header__logo { transform: scale(.8); }
+  .header__logo.is-touch { opacity: .7; }
+  .header__list { display: none; }
 }

@@ -16,7 +16,6 @@
   );
   transition: all .2s ease-in-out;
 }
-.c-article:hover { transform: scale(1.05); }
 .c-atricle__bg {
   overflow: hidden;
   position: absolute;
@@ -39,14 +38,24 @@
   text-align: left;
 }
 .c-article__date {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.3rem;
   letter-spacing: .1rem;
 }
 .c-article__title {
-  margin-bottom: 1.2rem;
-  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  line-height: 1.4;
 }
 .c-article__desc {
   margin-bottom: 1.2rem;
   line-height: 1.6;
+}
+
+@media (--pc) {
+  .c-article:hover { transform: scale(1.05); }
+}
+
+@media (--mobile) {
+  .c-article.is-touch { transform: scale(1.05); }
+  .c-article__title { font-size: 1.8rem; }
 }

@@ -1,0 +1,18 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+<div class="p-single">
+  <article>
+    <header class="p-single__head">
+      <h1 class="p-single__head__title">{{ .Title }}</h1>
+    </header>
+
+    <div class="c-post">
+      {{ .Content }}
+    </div>
+  </article>
+</div>
+
+{{ partial "footer.html" . }}
+{{ partial "navi.html" . }}
+{{ partial "foot.html" . }}

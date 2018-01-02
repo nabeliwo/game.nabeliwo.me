@@ -1,0 +1,98 @@
+.c-navi__button {
+  z-index: 20;
+  position: fixed;
+  right: 15px;
+  bottom: 15px;
+  width: 55px;
+  height: 55px;
+  margin: auto;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-rainbow-lightblue) 0%, var(--color-rainbow-blue) 100%);
+  transition: all .3s;
+}
+.c-navi__button__bar {
+  position: absolute;
+  left: 50%;
+  display: block;
+  width: 26px;
+  height: 2px;
+  margin: 0 0 0 -13px;
+  background-color: var(--color-white);
+  transition: all .2s;
+}
+.c-navi__button__bar:nth-child(1) { top: 20px; }
+.c-navi__button__bar:nth-child(2) { top: 26px; }
+.c-navi__button__bar:nth-child(3) { top: 32px; }
+
+.c-navi__box {
+  visibility: hidden;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.c-navi__bg {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(26, 31, 33, .96);
+  transition: all .3s;
+}
+
+.c-navi__list {
+  opacity: 0;
+  position: absolute;
+  right: 10px;
+  bottom: 110px;
+  display: inline-block;
+  text-align: right;
+  transition: all .1s;
+}
+.c-navi__list > .c-navi__item:not(:first-child) { margin-top: 3rem; }
+.c-navi__link {
+  position: relative;
+  padding-bottom: 1rem;
+  color: var(--color-white);
+  font-size: 2.4rem;
+  letter-spacing: .1em;
+}
+.c-navi__link::after {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background: linear-gradient(to right, var(--color-rainbow-green) 0%, var(--color-rainbow-lightblue) 50%, var(--color-rainbow-blue) 100%);
+  content: '';
+  transition: opacity .2s ease-in-out;
+}
+.c-navi__link.is-touch { opacity: .8; }
+
+.c-navi.is-open .c-navi__button__bar:nth-child(1) {
+  top: 26px;
+  transform: rotate(-315deg);
+}
+.c-navi.is-open .c-navi__button__bar:nth-child(2) { opacity: 0; }
+.c-navi.is-open .c-navi__button__bar:nth-child(3) {
+  top: 26px;
+  transform: rotate(315deg);
+}
+.c-navi.is-open .c-navi__box { visibility: visible; }
+
+.c-navi.is-open .c-navi__bg { opacity: 1; }
+.c-navi.is-open .c-navi__list {
+  opacity: 1;
+  right: 15px;
+  transition: all .3s ease-out .2s;
+}
+
+
+@media (--pc) {
+  .c-navi { display: none; }
+}

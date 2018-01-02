@@ -1,25 +1,6 @@
-.p-keyvisual {
-  padding: 4rem 0;
-}
-.p-keyvisual__logo {
-  width: 456px;
-  margin: 0 auto 3rem;
-  text-align: center;
-}
-.p-keyvisual__logo > svg {
-  width: 100%;
-}
-.p-keyvisual__text {
-  color: var(--color-white);
-  font-weight: bold;
-  font-size: 1.6rem;
-  text-align: center;
-  font-family: 'Hiragino Maru Gothic Pro', 'ヒラギノ丸ゴ Pro W4', '游ゴシック Medium', meiryo, sans-serif;
-}
-
-.p-home {
+.p-home { padding: 4rem; }
+.p-home__list {
   margin: -2rem;
-  padding: 4rem;
   font-size: 0;
   text-align: center;
 }
@@ -28,4 +9,15 @@
   width: 340px;
   padding: 2rem;
   vertical-align: middle;
+}
+
+@media (--mobile) {
+  .p-home__header { display: none; }
+  .p-home { padding: 2rem; }
+  .p-home__list { margin: 0; }
+  .p-home__item {
+    width: 100%;
+    padding: 0;
+  }
+  .p-home__list > .p-home__item:not(:first-child) { margin-top: 2rem; }
 }

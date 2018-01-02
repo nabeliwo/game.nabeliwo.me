@@ -1,16 +1,22 @@
 {{ partial "head.html" . }}
-{{ partial "header.html" . }}
 
-<div class="p-keyvisual">
-  <h1 class="p-keyvisual__logo">{{ partial "svg/logo-rainbow.html" . }}</h1>
-  <p class="p-keyvisual__text">ゲームだけで、生きていく・・・</p>
+<div class="p-home__header">
+  {{ partial "header.html" . }}
+</div>
+
+<div class="c-keyvisual">
+  <h1 class="c-keyvisual__logo">{{ partial "svg/logo-rainbow.html" . }}</h1>
+  <p class="c-keyvisual__text">ゲームだけで、生きていく・・・</p>
 </div>
 
 <div class="p-home">
-  {{ range where .Paginator.Pages "Section" "post" }}
-    <article class="p-home__item">{{ .Render "li" }}</article>
-  {{ end }}
+  <div class="p-home__list">
+    {{ range where .Paginator.Pages "Section" "post" }}
+      <article class="p-home__item">{{ .Render "li" }}</article>
+    {{ end }}
+  </div>
 </div>
 
 {{ partial "footer.html" . }}
+{{ partial "navi.html" . }}
 {{ partial "foot.html" . }}

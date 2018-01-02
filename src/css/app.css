@@ -27,9 +27,12 @@
 //  Components
 //-------------------------------------*/
 
+@import "./components/keyvisual";
 @import "./components/social";
 @import "./components/article";
 @import "./components/tag";
+@import "./components/post";
+@import "./components/navi";
 
 
 /*-------------------------------------//
@@ -37,3 +40,5 @@
 //-------------------------------------*/
 
 @import "./pages/home";
+@import "./pages/single";
+@import "./pages/taxonomy";

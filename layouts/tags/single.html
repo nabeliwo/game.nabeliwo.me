@@ -1,0 +1,18 @@
+{{ partial "head.html" . }}
+{{ partial "header.html" . }}
+
+<div class="p-single">
+  <article>
+    <h1 class="p-single__head__title">{{ .Title }}</h1>
+
+    <div class="c-tags c-tags--medium">
+      {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+        <a class="c-tag is-link js-touch" href="/tags/{{ $name | urlize }}">{{ $name }}</a>
+      {{ end }}
+    </div>
+  </article>
+</div>
+
+{{ partial "footer.html" . }}
+{{ partial "navi.html" . }}
+{{ partial "foot.html" . }}

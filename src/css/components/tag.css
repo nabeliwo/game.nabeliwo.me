@@ -11,7 +11,6 @@
   display: inline-block;
   border: 1px solid;
   border-radius: 3px;
-  transition: all .2s ease-in-out;
 }
 .c-tags--small .c-tag {
   margin: .3rem .1rem;
@@ -57,6 +56,7 @@
 }
 
 @media (--pc) {
+  .c-tag { transition: all .2s ease-in-out; }
   .c-tag.is-link:hover { color: var(--color-black) !important; }
   .c-tags > .c-tag.is-link:nth-child(8n + 1):hover { background-color: var(--color-rainbow-lightgreen); }
   .c-tags > .c-tag.is-link:nth-child(8n + 2):hover { background-color: var(--color-rainbow-green); }

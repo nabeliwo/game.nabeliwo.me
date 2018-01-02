@@ -1,0 +1,52 @@
+.c-share { color: var(--color-white) }
+.c-share__list {
+  margin: 0 -1rem;
+  font-size: 0;
+}
+.c-share__item {
+  display: inline-block;
+  width: 25%;
+  padding: 0 1rem;
+}
+.c-share__link {
+  z-index: 1;
+  position: relative;
+  display: block;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  line-height: 40px;
+  text-align: center;
+}
+.c-share__link::before {
+  z-index: -1;
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  border-radius: 2px;
+  background-color: var(--color-bg);
+  content: "";
+}
+.c-share__link.is-facebook { background: linear-gradient(90deg, var(--color-rainbow-lightgreen) 0, var(--color-rainbow-green) 100%); }
+.c-share__link.is-twitter { background: linear-gradient(90deg, var(--color-rainbow-lightblue) 0, var(--color-rainbow-blue) 100%); }
+.c-share__link.is-hatena { background: linear-gradient(90deg, var(--color-rainbow-purple) 0, var(--color-rainbow-pink) 100%); }
+.c-share__link.is-pocket { background: linear-gradient(90deg, var(--color-rainbow-vermilion) 0, var(--color-rainbow-orange) 100%); }
+
+@media (--pc) {
+  .c-share__link,
+  .c-share__link::before { transition: all .2s ease-in-out; }
+  .c-share__link:hover { color: var(--color-bg); }
+  .c-share__link:hover::before { opacity: 0; }
+}
+
+@media (--mobile) {
+  .c-share__list { margin: 0 -.5rem; }
+  .c-share__item { padding: 0 .5rem; }
+  .c-share__link {
+    font-size: 1.2rem;
+    line-height: 30px;
+  }
+  .c-share__link.is-touch { color: var(--color-bg); }
+  .c-share__link.is-touch::before { opacity: 0; }
+}

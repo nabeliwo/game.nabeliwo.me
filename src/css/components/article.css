@@ -14,7 +14,6 @@
     var(--color-rainbow-vermilion)  86%,
     var(--color-rainbow-orange)     100%
   );
-  transition: all .2s ease-in-out;
 }
 .c-atricle__bg {
   overflow: hidden;
@@ -52,6 +51,7 @@
 }
 
 @media (--pc) {
+  .c-article { transition: all .2s ease-in-out; }
   .c-article:hover { transform: scale(1.05); }
 }
 

@@ -14,9 +14,11 @@
   font-size: 2.8rem;
   line-height: 1.4;
 }
+.p-single__share { padding: 14rem 0 8rem; }
 
 @media (--mobile) {
-  .p-single { padding: 4rem 2rem; }
+  .p-single { padding: 4rem 1rem; }
   .p-single__head { margin-bottom: 4rem; }
   .p-single__head__title { font-size: 2.4rem; }
+  .p-single__share { padding: 10rem 0 4rem; }
 }

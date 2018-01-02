@@ -2,10 +2,10 @@
   display: block;
   width: 30px;
   height: 30px;
-  transition: transform .3s;
 }
 
 @media (--pc) {
+  .c-social { transition: transform .2s; }
   .c-social:hover { transform: scale(.8, .8); }
 }
 

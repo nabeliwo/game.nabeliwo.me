@@ -1,0 +1,16 @@
+<div class="c-share">
+  <ul class="c-share__list">
+    <li class="c-share__item">
+      <a class="c-share__link is-facebook js-touch" href="http://www.facebook.com/share.php?u={{ .Permalink | safeURL }}&t={{ $.Scratch.Get "pageTitle"  | safeURL }}" target="new">Facebook</a>
+    </li>
+    <li class="c-share__item">
+      <a class="c-share__link is-twitter js-touch" href="http://twitter.com/intent/tweet?text={{ $.Scratch.Get "pageTitle" | safeURL }}%0a{{ .Permalink | safeURL }}" onclick="window.open(encodeURI(decodeURI(this.href)), 'tweetwindow', 'width=550, height=450, personalbar=0, toolbar=0, scrollbars=1, resizable=1' ); return false;" target="new">Twitter</a>
+    </li>
+    <li class="c-share__item">
+      <a class="c-share__link is-hatena js-touch" href="http://b.hatena.ne.jp/add?mode=confirm&url={{ .Permalink | safeURL }}&title={{ $.Scratch.Get "pageTitle" | safeURL }}" onclick="window.open(encodeURI(decodeURI(this.href)), 'hatenawindow', 'width=500, height=450, menubar=no, toolbar=no, scrollbars=yes'); return false;">Hatena</a>
+    </li>
+    <li class="c-share__item">
+      <a class="c-share__link is-pocket js-touch" href="http://getpocket.com/edit?url={{ .Permalink | safeURL }}&title={{ $.Scratch.Get "pageTitle" | safeURL }}" onclick="window.open(encodeURI(decodeURI(this.href)), 'pocketwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;">Pocket</a>
+    </li>
+  </ul>
+</div>
